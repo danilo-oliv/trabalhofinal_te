@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnimalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [AnimalController::class, 'showAll'])->name('items.showAll');
+
+Route::get('/adicionar', [AnimalController::class, 'create']);
+Route::post('/adicionar', [AnimalController::class, 'store'])->name('form.store');
+
+Route::get('/editar', [AnimalController::class, 'update']);
+Route::put('/editar', [AnimalController::class, 'save'])->name('form.save');
+
+Route::post('/deletar/{id}', [AnimalController::class, 'delete']);
