@@ -1,0 +1,85 @@
+/* Tabela */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px; /* Tamanho de fonte ajustado para maior legibilidade */
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve à tabela */
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #4CAF50; /* Cor verde mais suave */
+  color: white; /* Cor do texto das células de cabeçalho */
+  font-weight: bold;
+  text-transform: uppercase; /* Coloca o texto em maiúsculas */
+}
+
+.styled-table tr:hover {
+  background-color: #f5f5f5; /* Cor de fundo suave ao passar o mouse */
+}
+
+.styled-table td {
+  transition: background-color 0.3s ease-in-out; /* Suaviza a transição da cor de fundo */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .styled-table th, .styled-table td {
+    font-size: 14px; /* Ajusta o tamanho da fonte em telas menores */
+    padding: 10px;
+  }
+}
+
+/* Botões */
+.btn-add, .btn-edit, .btn-remove {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Suaviza a transição das cores e do efeito de hover */
+}
+
+.btn-add {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.btn-edit {
+  background-color: #FFC107;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #e0a800;
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.btn-remove {
+  background-color: #F44336;
+  color: white;
+}
+
+.btn-remove:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+/* Efeito de foco nos botões */
+.btn-add:focus, .btn-edit:focus, .btn-remove:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Adiciona um contorno suave ao focar no botão */
+}
