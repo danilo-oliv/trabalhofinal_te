@@ -22,4 +22,4 @@ Route::post('/adicionar', [AnimalController::class, 'store'])->name('form.store'
 Route::get('/editar', [AnimalController::class, 'update']);
 Route::put('/editar', [AnimalController::class, 'save'])->name('form.save');
 
-Route::post('/deletar/{id}', [AnimalController::class, 'delete']);
+Route::delete('/deletar/{id}', [AnimalController::class, 'delete'])->name('animal.delete');
